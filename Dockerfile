@@ -19,6 +19,8 @@ RUN git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && sudo -u bui
 
 RUN sudo -u build yay -S python3816 --noconfirm
 RUN sudo -u build yay -S ffmpeg-gpl-bin --noconfirm
+# RUN sudo -u build yay -S megatools --noconfirm
+RUN sudo -u build yay -S megatools-bin --noconfirm
 RUN wget https://bootstrap.pypa.io/get-pip.py && python3.8 get-pip.py
 RUN rm -Rf get-pip.py yay-bin
 
