@@ -14,7 +14,7 @@ RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN echo "root ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 RUN git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && sudo -u build makepkg -si --noconfirm
-RUN git clone https://github.com/BlackCatDevel0per/my-aur-packages-source && cd my-aur-packages-source/python3816 && sudo -u build makepkg -si --noconfirm
+RUN git clone https://github.com/BlackCatDevel0per/my-aur-packages-source && cd my-aur-packages-source/python3816-autogpg && sudo -u build makepkg -si --noconfirm
 # RUN sudo -u build yay -S python3816 --noconfirm
 
 RUN sudo -u build yay -S ffmpeg-gpl-bin --noconfirm
