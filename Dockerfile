@@ -2,8 +2,6 @@ FROM archlinux:latest
 
 RUN pacman -Syyuu --noconfirm && pacman -S openssh git pkgconf autoconf binutils libtool gzip grep fakeroot make wget sudo gcc --noconfirm
 
-RUN pacman -S tree
-
 RUN useradd --no-create-home --shell=/bin/false build && usermod -L build
 
 RUN mkdir /home/build 
