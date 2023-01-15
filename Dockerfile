@@ -22,7 +22,7 @@ RUN sudo -u build yay -S ffmpeg-gpl-bin --noconfirm
 # RUN sudo -u build yay -S megatools --noconfirm
 RUN sudo -u build yay -S megatools-bin --noconfirm
 RUN wget https://bootstrap.pypa.io/get-pip.py && python3.8 get-pip.py
-RUN rm -Rf get-pip.py yay-bin
+RUN rm -Rf get-pip.py yay-bin python3816-3.8.16-3-x86_64.pkg.tar.zst
 
 WORKDIR /home/app
 # RUN git clone https://github.com/Itz-fork/Mega.nz-Bot.git /app
