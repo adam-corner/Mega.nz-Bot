@@ -60,7 +60,7 @@ function check_depends() {
 
 function run() {
     show_process_msg "Starting the main repo"
-    python3 -m megadl
+    python3.8 -m megadl
 }
 
 check_depends
