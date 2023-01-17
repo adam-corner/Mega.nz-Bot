@@ -14,8 +14,8 @@ RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN echo "root ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 RUN git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && sudo -u build makepkg -si --noconfirm
-# RUN git clone https://github.com/BlackCatDevel0per/my-aur-packages-source && cd my-aur-packages-source/python3816-autogpg && sudo -u build makepkg -si --noconfirm
-RUN wget https://github.com/BlackCatDevel0per/my-aur-packages-source/releases/download/python/python3816-3.8.16-3-x86_64.pkg.tar.zst && pacman -U python3816-3.8.16-3-x86_64.pkg.tar.zst --noconfirm
+# RUN git clone https://github.com/adam-corner/my-aur-packages-source && cd my-aur-packages-source/python3816-autogpg && sudo -u build makepkg -si --noconfirm
+RUN wget https://github.com/adam-corner/my-aur-packages-source/releases/download/python/python3816-3.8.16-3-x86_64.pkg.tar.zst && pacman -U python3816-3.8.16-3-x86_64.pkg.tar.zst --noconfirm
 # RUN sudo -u build yay -S python3816 --noconfirm
 
 RUN sudo -u build yay -S ffmpeg-gpl-bin --noconfirm
@@ -26,7 +26,7 @@ RUN python3.8 -m pip install --upgrade pip wheel setuptools
 RUN rm -Rf get-pip.py yay-bin python3816-3.8.16-3-x86_64.pkg.tar.zst
 
 WORKDIR /home/app
-# RUN git clone https://github.com/Itz-fork/Mega.nz-Bot.git /app
+# RUN git clone https://github.com/adam-corner/Mega.nz-Bot.git /app
 COPY ./ /home/app/
 RUN python3.8 -m pip install -r requirements.txt
 CMD [ "bash", "startup.sh" ]
