@@ -3,4 +3,4 @@ TgCrypto
 filetype
 filesplit
 wget
-git+https://github.com/Itz-fork/pyro-mega.py.git
+git+https://github.com/BlackCatDevel0per/pyro-mega.py.git
